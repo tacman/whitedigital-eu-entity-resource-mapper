@@ -31,7 +31,7 @@ class UTCDateTimeImmutable extends DateTimeImmutable
     {
         $utcTime = $object->setTimezone(self::getUTCTimeZone());
 
-        return new static($utcTime->format('Y-m-d H:i:s.u'));
+        return new self($utcTime->format('Y-m-d H:i:s.u'));
     }
 
     /**
