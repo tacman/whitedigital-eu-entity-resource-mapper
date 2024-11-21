@@ -51,7 +51,7 @@
         "symfony/security-bundle": "^6.4 || ^7.1",
         "symfony/security-core": "^6.4 || ^7.1",
         "symfony/serializer": "^6.4 || ^7.1",
-        "symfony/service-contracts": "*",
+        "symfony/service-contracts": "^2.0 || ^3.5",
         "symfony/string": "^6.4 || ^7.1",
         "symfony/translation": "^6.4 || ^7.1",
         "symfony/validator": "^6.4 || ^7.1",
@@ -63,8 +63,16 @@
         "roave/security-advisories": "dev-latest",
         "phpunit/phpunit": "^10.0",
         "whitedigital-eu/config-pack": "^2",
-        "phpstan/phpstan": "^2.0"
+        "phpstan/phpstan": "^2.0",
+        "symfony/maker-bundle": "^1.61"
     },
+    "scripts": {
+        "phpstan": "phpstan",
+        "phpunit-base": "phpunit tests/",
+        "phpunit": "@phpunit-base --testdox",
+        "phpunit-coverage-text": "@phpunit-base --coverage-text --colors=never"
+    },
+
     "extra": {
         "branch-alias": {
             "dev-main": "0.x-dev"
